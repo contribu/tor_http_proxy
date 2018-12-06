@@ -3,6 +3,9 @@ services:
   tor_http_proxy:
     build: ../
     environment:
+      - EXIT_NODES={jp}
+      - EXCLUDE_NODES=SlowServer,{gb},{us},{ca},{au},{nz}
+      - EXCLUDE_EXIT_NODES={bg},{cz},{fi},{hu},{ie},{lv},{lt},{lu},{nl},{ro},{es},{se},{ch},{ru},{hk},{il}
       - NUM_TORS=16
     ports:
       - 8123:8123

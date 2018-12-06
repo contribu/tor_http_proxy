@@ -1,7 +1,7 @@
 SocksPort <%= tor_port %>
 Log notice stdout
 DataDirectory <%= data_directory %>
-ExitNodes {jp}
-ExcludeNodes SlowServer,{gb},{us},{ca},{au},{nz}
-ExcludeExitNodes {bg},{cz},{fi},{hu},{ie},{lv},{lt},{lu},{nl},{ro},{es},{se},{ch},{ru},{hk},{il}
+<%= (ENV['EXIT_NODES'] && !ENV['EXIT_NODES'].strip.empty?) ? "ExitNodes #{ENV['EXIT_NODES'].strip}" : '' %>
+<%= (ENV['EXCLUDE_NODES'] && !ENV['EXCLUDE_NODES'].strip.empty?) ? "ExcludeNodes #{ENV['EXCLUDE_NODES'].strip}" : '' %>
+<%= (ENV['EXCLUDE_EXIT_NODES'] && !ENV['EXCLUDE_EXIT_NODES'].strip.empty?) ? "ExcludeExitNodes #{ENV['EXCLUDE_EXIT_NODES'].strip}" : '' %>
 StrictNodes 1
