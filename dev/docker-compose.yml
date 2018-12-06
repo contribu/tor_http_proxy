@@ -1,0 +1,9 @@
+version: '2'
+services:
+  tor_http_proxy:
+    build: ../
+    environment:
+      - NUM_TORS=16
+    ports:
+      - 8123:8123
+

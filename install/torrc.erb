@@ -1,4 +1,7 @@
 SocksPort <%= tor_port %>
 Log notice stdout
 DataDirectory <%= data_directory %>
-
+ExitNodes {jp}
+ExcludeNodes SlowServer,{gb},{us},{ca},{au},{nz}
+ExcludeExitNodes {bg},{cz},{fi},{hu},{ie},{lv},{lt},{lu},{nl},{ro},{es},{se},{ch},{ru},{hk},{il}
+StrictNodes 1
