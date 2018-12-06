@@ -9,4 +9,3 @@ services:
       - NUM_TORS=16
     ports:
       - 8123:8123
-

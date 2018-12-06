@@ -5,3 +5,4 @@ DataDirectory <%= data_directory %>
 <%= (ENV['EXCLUDE_NODES'] && !ENV['EXCLUDE_NODES'].strip.empty?) ? "ExcludeNodes #{ENV['EXCLUDE_NODES'].strip}" : '' %>
 <%= (ENV['EXCLUDE_EXIT_NODES'] && !ENV['EXCLUDE_EXIT_NODES'].strip.empty?) ? "ExcludeExitNodes #{ENV['EXCLUDE_EXIT_NODES'].strip}" : '' %>
 StrictNodes 1
+GeoIPExcludeUnknown 1
